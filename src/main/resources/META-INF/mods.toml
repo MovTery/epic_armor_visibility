@@ -1,0 +1,36 @@
+modLoader = "javafml"
+loaderVersion = "${loader_version_range}"
+license = "${mod_license}"
+
+[[mods]]
+modId = "${mod_id}"
+version = "${mod_version}"
+displayName = "${mod_name}"
+authors = "${mod_authors}"
+description = '''
+A mod that supports hiding armor for the Epic Fight mod.
+By default, it hides all armor on the Epic Fight player model.
+For precise control, Armor Visibility needs to be installed as well.
+https://modrinth.com/mod/armor-visibility
+'''
+
+[[dependencies."${mod_id}"]]
+modId = "forge"
+mandatory = true
+versionRange = "${forge_version_range}"
+ordering = "NONE"
+side = "CLIENT"
+
+[[dependencies."${mod_id}"]]
+modId = "minecraft"
+mandatory = true
+versionRange = "${minecraft_version_range}"
+ordering = "NONE"
+side = "CLIENT"
+
+[[dependencies."${mod_id}"]]
+modId = "epicfight"
+versionRange = "[20.12.12,)"
+mandatory = true
+side = "CLIENT"
+ordering = "AFTER"
