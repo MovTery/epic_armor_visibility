@@ -26,8 +26,7 @@ public abstract class WearableItemLayerMixin<E extends LivingEntity, T extends L
             at = @At(
                     value = "INVOKE",
                     target = "Lnet/minecraft/world/entity/LivingEntity;getItemBySlot(Lnet/minecraft/world/entity/EquipmentSlot;)Lnet/minecraft/world/item/ItemStack;"
-            ),
-            remap = false
+            )
     )
     private ItemStack redirectGetItemBySlot(LivingEntity entity, EquipmentSlot slot) {
         ItemStack item = entity.getItemBySlot(slot);
